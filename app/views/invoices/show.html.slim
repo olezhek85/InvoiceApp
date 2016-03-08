@@ -1,0 +1,21 @@
+p#notice = notice
+
+p
+  strong Amount:
+  = @invoice.amount
+p
+  strong Company:
+  = @invoice.company
+p
+  strong Contragent:
+  = @invoice.contragent
+p
+  strong Currency:
+  = @invoice.currency
+p
+  strong Date:
+  = @invoice.date
+
+= link_to 'Edit', edit_invoice_path(@invoice)
+'|
+= link_to 'Back', invoices_path
