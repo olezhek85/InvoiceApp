@@ -9,6 +9,10 @@ gem 'pg', '~> 0.15'
 gem 'rails_12factor', group: :production
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
+
+# Use Bootstrap for stylesheets
+gem 'bootstrap-sass', '~> 3.3.6'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
@@ -32,6 +36,9 @@ gem 'puma'
 
 # Slim generators for Rails 4
 gem "slim-rails"
+
+# Powerful components to create your forms
+gem 'simple_form'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

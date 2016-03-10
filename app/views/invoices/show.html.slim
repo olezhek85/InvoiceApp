@@ -1,21 +1,24 @@
 p#notice = notice
 
-p
-  strong Amount:
-  = @invoice.amount
-p
-  strong Company:
-  = @invoice.company
-p
-  strong Contragent:
-  = @invoice.contragent
-p
-  strong Currency:
-  = @invoice.currency
-p
-  strong Date:
-  = @invoice.date
-
-= link_to 'Edit', edit_invoice_path(@invoice)
-'|
-= link_to 'Back', invoices_path
+.row
+  .col-md-8.col-md-offset-2
+    .panel.panel-default
+      .panel-heading
+        h3.panel-title Invoices
+      .panel-body       
+        p
+          strong Company:
+          = @invoice.company
+        p
+          strong Contragent:
+          = @invoice.contragent
+        p
+          strong Amount:
+          = "#{@invoice.amount} #{@invoice.currency}"
+        p
+          strong Date:
+          = @invoice.date
+      .panel-footer
+        .btn-group
+          = link_to 'Edit', edit_invoice_path(@invoice), class: "btn btn-danger"
+          = link_to 'Back', invoices_path, class: "btn btn-warning"

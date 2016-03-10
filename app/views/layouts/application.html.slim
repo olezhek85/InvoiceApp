@@ -1,0 +1,23 @@
+doctype html
+html
+  head
+    title Invoices
+    = stylesheet_link_tag    'application', media: 'all'
+    = javascript_include_tag 'application'
+    = csrf_meta_tags
+body
+  nav.navbar.navbar-default
+    .container-fluid
+      .navbar-header
+        button.navbar-toggle.collapsed data-target="#bs-example-navbar-collapse-2" data-toggle="collapse" type="button" 
+          span.sr-only Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        a.navbar-brand href="#"  Invoices
+      #bs-example-navbar-collapse-2.collapse.navbar-collapse
+        ul.nav.navbar-nav
+          li
+            = link_to "Invoices", invoices_path
+  .container-fluid
+    = yield

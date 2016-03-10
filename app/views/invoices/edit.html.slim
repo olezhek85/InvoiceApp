@@ -1,8 +1,10 @@
-h1 Editing invoice
-
-== render 'form'
-
-= link_to 'Show', @invoice
-'|
-= link_to 'Back', invoices_path
-
+.row
+  .col-md-10.col-md-offset-1
+    .panel.panel-default
+      .panel-heading
+      	h3.panel-title Edit Invoice
+      .panel-body
+        = render 'form'
+      .panel-footer
+      	= link_to 'Back', invoices_path, class: "btn btn-danger"
+        = link_to 'Show', @invoice, class: "btn btn-success"
