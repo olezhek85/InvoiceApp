@@ -29,7 +29,7 @@
 
 	#items {
 		td.price_td, td.delete_td {
-			padding-top: 16px;
+			vertical-align: middle;
 		}
 
 		input { font-size: 12px; }
@@ -50,7 +50,7 @@
 		textarea { width: 100%; text-align: center;}
 	}
 
-	.delete { color: #FF3B30; font-size: 16px; }
+	.delete { color: #FF3B30; font-size: 16px; text-decoration: none;}
 }
 .page-header {
 	  	margin: 10px 0 20px 0;

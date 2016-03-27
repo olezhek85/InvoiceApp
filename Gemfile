@@ -40,6 +40,8 @@ gem "slim-rails"
 # Powerful components to create your forms
 gem 'simple_form'
 
+gem 'themify-icons-rails'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
