@@ -1,0 +1,44 @@
+## Customize the test machine
+machine:
+
+  timezone:
+    Europe/Kiev # Set the timezone
+
+  # Version of ruby to use
+  ruby:
+    version:
+      2.3.0
+
+  # Override /etc/hosts
+  hosts:
+    circlehost: 127.0.0.1
+    dev.mycompany.com: 127.0.0.1
+
+  # Add some environment variables
+  environment:
+    CIRCLE_ENV: test
+    DATABASE_URL: postgres://ubuntu:@127.0.0.1:5432/circle_test
+
+
+## Customize dependencies
+dependencies:
+  pre:
+    - gem install bundler
+
+  override:
+    - bundle install: # note ':' here
+        timeout: 300 # fail if command has no output for 5 minutes
+
+## Customize database setup
+database:
+  override:
+    # replace CircleCI's generated database.yml
+    - cp config/database.yml.ci config/database.yml
+    - bundle exec rake db:create db:schema:load
+
+## Customize test commands
+test:
+  override:
+    - bundle exec rake test
+
+
