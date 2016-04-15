@@ -4,7 +4,17 @@ p#notice = notice
   .col-md-8.col-md-offset-2
     .panel.panel-default
       .panel-heading
-        h3.panel-title Invoices
+        .container-fluid
+          .col-md-2 
+            = link_to 'New Invoice', new_invoice_path, class: "btn btn-primary"
+          = search_form_for @search, url: search_invoices_path, html: { class: 'form-inline col-md-8 col-md-offset-1', method: :post } do |f|
+            .input-daterange
+              .col-md-4
+                = f.text_field :date_gteq, class: 'form-control', placeholder: 'Date >= to'
+              .col-md-4.col-md-offset-1
+                = f.text_field :date_lteq, class: 'form-control', placeholder: 'Date <= to'
+            .col-md-2.col-md-offset-1.form-actions
+              = f.submit 'Search', class: 'btn btn-success'
       .panel-body        
         table.table.table-hover.table-bordered
           thead
@@ -26,4 +36,3 @@ p#notice = notice
                 td = link_to 'Edit', edit_invoice_path(invoice)
                 td = link_to 'Destroy', invoice, data: {:confirm => 'Are you sure?'}, :method => :delete
       .panel-footer
-        = link_to 'New Invoice', new_invoice_path, class: "btn btn-primary"

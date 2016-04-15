@@ -35,12 +35,13 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'puma'
 
 # Slim generators for Rails 4
-gem "slim-rails"
+gem 'slim-rails'
 
 # Powerful components to create your forms
 gem 'simple_form'
 
 gem 'themify-icons-rails'
+gem 'ransack'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
