@@ -42,6 +42,7 @@ gem 'simple_form'
 
 gem 'themify-icons-rails'
 gem 'ransack'
+gem 'faker', '~> 1.6', '>= 1.6.3'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
